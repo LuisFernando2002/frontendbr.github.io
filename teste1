@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Código Oriental</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('https://cdn.openai.com/chat-assets/dragon-background-app.png');
+        background-size: cover;
+        background-position: center;
+        color: #facc15;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: rgba(29, 29, 29, 0.8);
+        border: 1px solid #facc15;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px #fcbf49;
+        max-width: 500px;
+        padding: 2rem;
+        text-align: center;
+      }
+      .btn {
+        background: linear-gradient(to right, #facc15, #ef4444);
+        color: black;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        font-weight: bold;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+      ul {
+        text-align: left;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #fef9c3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="step1">
+      <h1 style="color: #dc2626;">🎲 Código Secreto Oriental</h1>
+      <p>Códigos usados por apostadores de Macau para ativar padrões raros nos slots. Descubra o seu.</p>
+      <button class="btn" onclick="generateCode()">Liberar código da sorte</button>
+    </div>
+
+    <div class="card" id="step2" style="display: none;">
+      <h2 style="color: #facc15;">🔐 Código Gerado com Sucesso</h2>
+      <p id="code" style="font-size: 2rem; font-weight: bold; color: #dc2626; margin: 1rem 0;"></p>
+      <p>Esse código foi usado por jogadores chineses para bugar o padrão de slots. Use com atenção.</p>
+      <button class="btn" onclick="goToStep(3)">Ver sequência mística</button>
+    </div>
+
+    <div class="card" id="step3" style="display: none;">
+      <h2 style="color: #facc15;">📜 Sequência Sagrada</h2>
+      <ul>
+        <li>Deposite R$30</li>
+        <li>Abra o jogo Sweet Bonanza ou Gates of Olympus</li>
+        <li>Jogue 3 vezes com R$5</li>
+        <li>Depois aposte R$10</li>
+        <li>Finalize com R$0,20</li>
+        <li>Durante a última rodada, visualize mentalmente o símbolo do dragão 🐉</li>
+      </ul>
+      <button class="btn">Assistir ritual completo</button>
+    </div>
+
+    <script>
+      function generateCode() {
+        const random = Math.floor(100 + Math.random() * 900);
+        const code = `金-X${random}-龍`;
+        document.getElementById("code").textContent = code;
+        document.getElementById("step1").style.display = "none";
+        document.getElementById("step2").style.display = "block";
+      }
+
+      function goToStep(step) {
+        document.getElementById("step2").style.display = "none";
+        document.getElementById("step3").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
